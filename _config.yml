@@ -4,7 +4,7 @@
 # Avatar
 
 # Site
-title: 冰澜 
+title: 冰澜
 subtitle:
 author: anyfeel
 avatar: /uploads/avatar.jpg
@@ -78,3 +78,6 @@ deploy:
   type: git
   repository: git@github.com:anyfeel/anyfeel.github.io.git
   branch: master
+
+include:
+    - .nojekyll
