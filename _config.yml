@@ -8,7 +8,7 @@ title: 冰澜
 subtitle:
 author: anyfeel
 avatar: /uploads/avatar.jpg
-description: 胆小鬼连幸福都会害怕，碰到棉花都会受伤，有时还被幸福所伤
+description: 我就是我，是颜色不一样的烟花
 language: zh-Hans
 timezone:
 
@@ -65,7 +65,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: even
 
 duoshuo_shortname:
     anyfeel-notes
