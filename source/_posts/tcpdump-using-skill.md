@@ -35,16 +35,19 @@ eg: src host1 or src host2
 proto[x:y] 过滤从x字节开始的y字节数。比如ip[2:2]过滤出3、4字节（第一字节从0开始排
 
 eg:
+```
 tcp[(tcp[12]>>2):4] = 0x47455420
 tcp[12]>>4<<2 == tcp[12]>>22
 tcp[12]>>4 拿到 13 字节的 高 4 位，
 >>2相当于除以 4(32/8)，即偏移的 8 bits 位数
+```
 
 ### 标志位过滤
 tcp[tcpflags]=tcp-syn
 
 ## TCP Header Format
 
+```
     0                   1                   2                   3
     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -70,10 +73,12 @@ tcp[tcpflags]=tcp-syn
     The number of ```32 bit words``` in the TCP Header.  This indicates where
     the data begins.  The TCP header (even one including options) is an
     integral number of 32 bits long.
+```
 
 
 ## IP format
 
+```
     0                   1                   2                   3
     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -89,3 +94,4 @@ tcp[tcpflags]=tcp-syn
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
    |                    Options                    |    Padding    |
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+```
