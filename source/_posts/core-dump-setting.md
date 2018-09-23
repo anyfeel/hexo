@@ -1,7 +1,7 @@
 ---
 title: Linux core 设置
 date: 2016-09-25 19:32:26
-tags: linux
+tags: Linux
 ---
 
 linux 程序异常退出时，内核会生成 core 文件，通过 GDB 查看 core 文件可以定位程序异常退出时候的堆栈信息，指示出错的位置。

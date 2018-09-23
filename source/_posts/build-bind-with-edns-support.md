@@ -1,7 +1,7 @@
 ---
 title: build bind with edns support
 date: 2018-09-23 18:21:51
-tags:
+tags: DNS
 ---
 
 ## download and extract BIND.

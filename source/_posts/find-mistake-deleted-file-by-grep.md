@@ -1,7 +1,7 @@
 ---
 title: Linux 使用 grep 找回误删文件
 date: 2016-09-26 09:38:54
-tags: linux
+tags: Linux
 ---
 
 在操作 linux 过程中，经常由于错误的操作误删除文件，则可以使用 grep 操作找回

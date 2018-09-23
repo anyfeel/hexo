@@ -1,7 +1,7 @@
 ---
 title: lua and 和 or 踩坑
 date: 2016-09-25 23:59:14
-tags: lua
+tags: Lua
 ---
 
 ## lua and or 操作
