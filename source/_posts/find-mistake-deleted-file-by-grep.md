@@ -1,5 +1,5 @@
 ---
-title: 'find mistake deleted file by grep'
+title: Linux 使用 grep 找回误删文件
 date: 2016-09-26 09:38:54
 tags: linux
 ---

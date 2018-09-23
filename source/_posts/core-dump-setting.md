@@ -1,5 +1,5 @@
 ---
-title: core-dump-setting
+title: Linux core 设置
 date: 2016-09-25 19:32:26
 tags: linux
 ---
@@ -12,7 +12,7 @@ $ ulimit -c
 ```
 如果结果为0，则表示系统关闭了该功能
 
-## 开启 core 
+## 开启 core
 在当前 shell 设置
 ```sh
 $ ulimit -c unlimited

@@ -1,7 +1,7 @@
 ---
-title: tcpdump-using-skill
+title: Unix tcpdump 使用技巧
 date: 2018-03-18 21:46:18
-tags:
+tags: Linux
 ---
 
 ## 常用 tcpdump 参数解析
@@ -11,7 +11,7 @@ tags:
 
 ## 常用抓包实例
 ```
-# host 和 port 过滤 
+# host 和 port 过滤
 tcpdump -i any -Ans 0 'src host 1.1.1.1 && dst host 2.2.2. && dst port 3100'
 
 # GET

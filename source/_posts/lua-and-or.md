@@ -1,5 +1,5 @@
 ---
-title: lua-and-or
+title: lua and 和 or 踩坑
 date: 2016-09-25 23:59:14
 tags: lua
 ---
@@ -32,7 +32,7 @@ step = debug and 0 or 80
 ```
 
 ## 错误原因
-lua将 0 认为是 true  
+lua将 0 认为是 true
 
 ## 解决方法
 定义 `debug = true or false`
