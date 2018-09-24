@@ -233,34 +233,34 @@ Showing top 10 nodes out of 35
 go-torch -u http://127.0.0.1:4500
 ```
 
-生成 [CPU 火焰图](http://onepiece.b0.upaiyun.com/assets/logger-normal-cpu.svg)
+生成 [CPU 火焰图](http://onepiece.nos-eastchina1.126.net/images/logger-normal-cpu.svg)
 
 
-![CPU 火焰图](http://onepiece.b0.upaiyun.com/assets/logger-normal-cpu1.png)
+![CPU 火焰图](http://onepiece.nos-eastchina1.126.net/images/logger-normal-cpu1.png)
 
 从图中能一眼看到 publish 函数中的压缩操作占了 70% 左右的 CPU。
 
-![CPU 火焰图](http://onepiece.b0.upaiyun.com/assets/logger-normal-cpu2.png)
+![CPU 火焰图](http://onepiece.nos-eastchina1.126.net/images/logger-normal-cpu2.png)
 
 而 gin httpserver 只占用了 2% 左右的 CPU， 和我们使用 `go tool pprof` 的 top 命令分析的结果一致。
 
 默认情况下 go-torch 采集的是 CPU 的 profile， 这里介绍下 mem 火焰图的采集。
 
-### `inuse_space` [火焰图](http://onepiece.b0.upaiyun.com/assets/logger-normal-inuse-mem.svg)
+### `inuse_space` [火焰图](http://onepiece.nos-eastchina1.126.net/images/logger-normal-inuse-mem.svg)
 
 ```
 go-torch -inuse_space http://127.0.0.1:4500/debug/pprof/heap --colors=mem
 ```
 
-![火焰图](http://onepiece.b0.upaiyun.com/assets/logger-normal-inuse-mem.png)
+![火焰图](http://onepiece.nos-eastchina1.126.net/images/logger-normal-inuse-mem.png)
 
-### `alloc_space` [火焰图](http://onepiece.b0.upaiyun.com/assets/logger-normal-alloc-mem.svg)
+### `alloc_space` [火焰图](http://onepiece.nos-eastchina1.126.net/images/logger-normal-alloc-mem.svg)
 
 ```
 go-torch -alloc_space http://127.0.0.1:4500/debug/pprof/heap --colors=mem
 ```
 
-![火焰图](http://onepiece.b0.upaiyun.com/assets/logger-normal-alloc-mem.png)
+![火焰图](http://onepiece.nos-eastchina1.126.net/images/logger-normal-alloc-mem.png)
 
 ## logger 100% CPU 分析
 前面介绍了 `go tool pprof` 和火焰图的使用方法，这里使用火焰图复现 logger 100% CPU 问题。
@@ -273,11 +273,11 @@ wrk -t1 -c100 -d30 --script=post.lua 'http://127.0.0.1:4500/marco/log'
 
 查看 CPU 占用情况
 
-![CPU](http://onepiece.b0.upaiyun.com/assets/logger-high-cpu.png)
+![CPU](http://onepiece.nos-eastchina1.126.net/images/logger-high-cpu.png)
 
-采集 30s 的 CPU profile [火焰图](http://onepiece.b0.upaiyun.com/assets/logger-abnormal-cpu.svg)
+采集 30s 的 CPU profile [火焰图](http://onepiece.nos-eastchina1.126.net/images/logger-abnormal-cpu.svg)
 
-![火焰图](http://onepiece.b0.upaiyun.com/assets/logger-abnormal-cpu.png)
+![火焰图](http://onepiece.nos-eastchina1.126.net/images/logger-abnormal-cpu.png)
 
 图中红色标记部分 `startSink` 函数中 `runtime.selectgo` 消耗了大量 CPU， 而 `runtime.selectgo` 上面只有 `runtime.sellock` 和 `runtime.selunlock` 两个操作，即大量 CPU 耗费在 `select` 操作上，火焰图呈秃顶状态，即瓶颈所在。
 
