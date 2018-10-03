@@ -103,12 +103,7 @@ ps -ef | grep zicogo | awk 'BEGIN{sum=""}{sum=($2","sum)}END{print sum}'
 awk '{s[$1] += $2; a[$1] += $3 }END{ for(i in s){  printf "%-50s %-20d %-20d\n", i,s[i],a[i] } }' upstats-2017-07-05-15-05.log+
 ```
 
-###
-```
-cp /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/_io.so /usr/local/Cellar/python/2.7.13/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/_io.so
-```
-
-###
+### 查看某个库的版本号
 ```
 ldconfig -p | grep libssl
 ```
