@@ -7,12 +7,12 @@ tags: Linux
 ## 常用 tcpdump 参数解析
 - -i 指定网卡，一般不清楚网卡设置直接使用 "any" 表示抓取所有网卡
 - -A 使用 ASCII 码打印收到的每个包
-- -X 同时以十六进制和 ASCII 打印包
+- -X 同时以十六进制和 ASCII 打印包
 
 ## 常用抓包实例
 ```
 # host 和 port 过滤
-tcpdump -i any -Ans 0 'src host 1.1.1.1 && dst host 2.2.2. && dst port 3100'
+tcpdump -i any -Ans 0 "src host 1.1.1.1 && dst host 2.2.2.2 && dst port 3100"
 
 # GET
 tcpdump -i eth1 'tcp[(tcp[12]>>2):4] = 0x47455420'
@@ -22,6 +22,7 @@ tcpdump -i eth1 'tcp[(tcp[12]>>2):4] = 0x504f5354'
 
 # TCP 标志位
 tcpdump -i any -Ans 0 'host 183.214.154.4 && tcp[tcpflags]=tcp-syn'
+
 ```
 
 ## tcpdump 过滤器
