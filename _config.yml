@@ -5,12 +5,12 @@
 
 # Site
 title: 冰澜
-subtitle:
+#subtitle:
 author: anyfeel
 avatar: /uploads/avatar.jpg
 description: 我就是我，是颜色不一样的烟花
 language: zh-Hans
-timezone:
+#timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -67,10 +67,14 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: next
 
-duoshuo_shortname:
-    anyfeel-notes
-baidu_analytics:
-    c5c5f17b527b0bd7281467d5fd5fa8c4
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+#duoshuo_shortname: anyfeel-notes
+#baidu_analytics: c5c5f17b527b0bd7281467d5fd5fa8c4
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
