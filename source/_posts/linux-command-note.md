@@ -28,6 +28,7 @@ find . -name '\*.c' | xargs wc -l {}\;
 ```
 sudo rpm -e --nodeps vim-common-7.4.160-1.el7.x86_64
 ```
+<!-- more --> >
 
 ### fio test
 ```

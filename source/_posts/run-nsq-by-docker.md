@@ -17,6 +17,8 @@ two interfaces: A TCP interface which is used by nsqd for broadcasts and an HTTP
 ## nsqadmin
 Web UI to view aggregated cluster stats in realtime and perform various administrative tasks
 
+<!-- more --> >
+
 # run nsq
 ## get nsq docker image
 ```

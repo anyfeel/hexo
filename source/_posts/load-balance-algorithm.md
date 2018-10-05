@@ -15,6 +15,8 @@ Nginx基于权重的轮询算法的实现可以参考它的一次代码提交 [U
 ## Lua 实现
 每次需要遍历所有的 servers 列表，返回 best server
 
+<!-- more --> >
+
 ```
 local ceil = math.ceil
 

@@ -19,6 +19,8 @@ debug = 0(or 1)
 step = debug and 0 or 80
 ```
 
+<!-- more --> >
+
 则无论 debug 取 0 还是 1，step 输出都是 0
 * 当 debug 为0
 ```
