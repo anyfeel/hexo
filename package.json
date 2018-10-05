@@ -19,6 +19,7 @@
     "hexo-renderer-marked": "^0.2.10",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.2.2",
+    "hexo-symbols-count-time": "^0.4.4",
     "hexo-util": "^0.6.3",
     "npm": "^6.4.1"
   }
