@@ -100,11 +100,11 @@ footer:
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
-index_with_subtitle: false
+index_with_subtitle: true
 
 
 # ---------------------------------------------------------------
@@ -269,7 +269,7 @@ excerpt_description: true
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
   enable: false
-  length: 150
+  length: 300
 
 # Post meta display settings
 post_meta:
@@ -478,8 +478,8 @@ pangu: false
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: anyfeel-cn
   count: true
   lazyload: false
 
@@ -488,7 +488,6 @@ changyan:
   enable: false
   appid:
   appkey:
-
 
 # Valine.
 # You can get your appid and appkey from https://leancloud.cn
@@ -629,7 +628,7 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
+  enable: true
   app_id: inBlnKMv1VjHkaivHEP16QIR-gzGzoHsz
   app_key: SNgeOmE0kLNPw2H5Iv2BitUs
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
@@ -656,7 +655,7 @@ busuanzi_count:
   total_visitors_icon: user
   total_views: true
   total_views_icon: eye
-  post_views: true
+  post_views: false
   post_views_icon: eye
 
 
