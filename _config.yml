@@ -87,7 +87,7 @@ include:
     - .nojekyll
 
 symbols_count_time:
-  symbols: true
+  symbols: false
   time: false
   total_symbols: false
   total_time: false
