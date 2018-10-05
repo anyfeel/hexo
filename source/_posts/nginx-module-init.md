@@ -26,7 +26,7 @@ ngx_preinit_modules(void)
     return NGX_OK;
 }
 ```
-<!-- more --> >
+<!-- more -->
 
 - `ngx_init_cycle` 初始化核心模块
 ```

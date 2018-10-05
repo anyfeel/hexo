@@ -25,7 +25,7 @@ tcpdump -i any -Ans 0 'host 183.214.154.4 && tcp[tcpflags]=tcp-syn'
 
 ```
 
-<!-- more --> >
+<!-- more -->
 
 ## tcpdump 过滤器
 ### 目标语法 `dst` 和 `src` 表示来源和目的地

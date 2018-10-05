@@ -16,7 +16,7 @@ comments: true
 [net/http/pprof](https://golang.org/pkg/net/http/pprof/)
 能方便的采集程序运行的堆栈、goroutine、内存分配和占用、io 等信息的 `.prof` 文件，然后可以使用 go tool pprof 分析 `.prof` 文件。两个包的作用是一样的，只是使用方式的差异。
 
-<!-- more --> >
+<!-- more -->
 
 ### runtime/pprof
 如果程序为非 httpserver 类型，使用此方式；在 main 函数中嵌入如下代码:
